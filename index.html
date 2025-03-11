@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriately as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Suturing World Models: Learning Predictive Models for Robotic Surgical Tasks">
+  <meta property="og:title" content="Towards Suturing World Models" />
+  <meta property="og:description"
+    content="Diffusion-based generative models that capture spatiotemporal dynamics of fine-grained robotic surgical sub-stitch actions" />
+  <meta property="og:url" content="https://mkturkcan.github.io/suturingmodels/" />
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/title.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+
+  <meta name="twitter:title" content="Towards Suturing World Models">
+  <meta name="twitter:description" content="Diffusion-based generative models for robotic surgical tasks">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/title.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords"
+    content="diffusion models, surgical robotics, world models, suturing, computer vision, robotic surgery, medical AI">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Towards Suturing World Models: Learning Predictive Models for Robotic Surgical Tasks</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body" style="padding-bottom: 0px;">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Towards Suturing World Models: <br>Learning Predictive Models for Robotic Surgical Tasks</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body" style="padding-bottom: 0px;">
+        <img src="static/images/title.svg"
+          alt="Workflow of the proposed approach for suturing world models."
+          width="50%" class="center" />
+        <h2 class="subtitle has-text-centered">
+          We prompt latent video diffusion models with text and (optionally) visual input. The models
+          are trained with expert-annotated ideal and non-ideal demonstrations, allowing them to output either class of quality.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              This work introduces specialized diffusion-based generative
+              models that capture the spatiotemporal dynamics of finegrained robotic surgical sub-stitch actions through supervised learning on annotated laparoscopic surgery footage.
+              The proposed models form a foundation for data-driven
+              world models capable of simulating the biomechanical interactions and procedural dynamics of surgical suturing
+              with high temporal fidelity. Annotating a dataset of ∼ 2K
+              clips extracted from simulation videos, we categorize surgical actions into fine-grained sub-stitch classes including
+              ideal and non-ideal executions of needle positioning, targeting, driving, and withdrawal. We fine-tune two stateof-the-art video diffusion models, LTX-Video and HunyuanVideo, to generate high-fidelity surgical action sequences
+              at ≥768×512 resolution and ≥49 frames. For training our
+              models, we explore both Low-Rank Adaptation (LoRA) and
+              full-model fine-tuning approaches. Our experimental results demonstrate that these world models can effectively
+              capture the dynamics of suturing, potentially enabling improved training simulators, surgical skill assessment tools,
+              and autonomous surgical systems. The models also display
+              the capability to differentiate between ideal and non-ideal
+              technique execution, providing a foundation for building
+              surgical training and evaluation systems. We release our
+              models for testing and as a foundation for future research.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body" style="padding-bottom: 0px;">
+        <img src="static/images/suturing.svg"
+          alt="Workflow of the proposed approach for suturing world models."
+          width="50%" class="center" />
+        <h2 class="subtitle has-text-centered">
+            Sample outputs of different models compared against a real-world needle driving clip from a backhand suturing task. (a) Real-
+            world sample, (b) HunyuanVideo, (c) LTX Video LoRA, (d) LTX Video full training.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- End image carousel -->
+
+  <!-- End paper abstract -->
+  <section class="hero teaser"></section>
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="title has-text-centered">Model Architecture & Training</h2>
+
+      <h2 class="subtitle has-text-centered">
+        We fine-tuned two state-of-the-art open-source video diffusion models: LTX-Video (2B parameters) and HunyuanVideo 
+        (13B parameters). We explored both full-parameter fine-tuning and low-rank adaptation (LoRA) with rank = 256. 
+        All models support high spatiotemporal resolution at ≥768×512 resolution with at least 49 frames per video, 
+        capturing the temporal dynamics of surgical actions with sufficient spatial detail for modeling complete sub-stitch actions.
+      </h2>
+
+      <table class="table is-fullwidth is-bordered is-striped is-hoverable">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Training Resolution (W×H×T)</th>
+            <th>Training Time (Hours)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>LTX-Video (t2v)</td>
+            <td>768×512×49</td>
+            <td>15</td>
+          </tr>
+          <tr>
+            <td>HunyuanVideo (t2v)</td>
+            <td>768×512×49</td>
+            <td>71</td>
+          </tr>
+          <tr>
+            <td>LTX-Video (i2v)</td>
+            <td>1024×576×49, 960×444×65, 512×288×121</td>
+            <td>35</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  </section>
+
+  <section class="hero is-small">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title has-text-centered">Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            We manually annotated start and end times of sub-stitch actions in 102 training session videos. Each sub-stitch was
+            expert-annotated with a binary technical score (ideal or non-ideal), reflecting the operator's skill while performing the
+            sub-stitch action. The final dataset comprises 1,836 video clips from railroad and backhand suturing exercises, annotated with 
+            detailed sub-stitch classifications:
+          </p>
+          <ul>
+            <li><strong>Needle Positioning (ideal/non-ideal):</strong> Grasping and orienting the needle appropriately</li>
+            <li><strong>Needle Targeting (ideal/non-ideal):</strong> Approaching the tissue at the correct angle and position</li>
+            <li><strong>Needle Driving (ideal/non-ideal):</strong> Passing the needle through tissue with proper wrist rotation</li>
+            <li><strong>Needle Withdrawal (ideal/non-ideal):</strong> Extracting the needle along its curved trajectory</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero">
+    <div class="hero-body" style="padding-bottom: 0px;">
+      <div class="container is-max-desktop">
+        <h2 class="title has-text-centered">Research Team</h2>
+
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://keremturkcan.com" target="_blank">Mehmet Kerem Turkcan</a>,
+              </span>
+              <span class="author-block">
+                <a href="#" target="_blank">Mattia Ballo</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.nycbariatrics.com/dr-filicori-md/" target="_blank">Filippo Filicori</a>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.aidl.ee.columbia.edu/" target="_blank">Zoran Kostic</a>
+              </span>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Columbia University & Northwell Health, Lenox Hill Hospital</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <div class="column has-text-centered">
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+
+              <p>
+                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                  href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                You are free to borrow the source code of this website, we just ask that you link back to this page in
+                the footer. <br> This website is licensed under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+</body>
+
+</html>
